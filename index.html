@@ -10,24 +10,44 @@
             <h1>ABA Behvaior Tracker</h1>
             &nbsp;
             <h3>Video Session Information</h3>
-            <p>
-                Video name: <input type="text" id="name" name="name" />
-                Session number: <input type="text" id="session" name="session" />
-                Session length: <input type="text" id="length" name="length" />
-            </p>
-            <h3>Button Information</h3>
-            <p>
-                Enter behaviors: <br>
-                R1: <input type="text" id="r1" name="r1" /> <br>
-                R2: <input type="text" id="r2" name="r2" /> <br>
-                R3: <input type="text" id="r3" name="r3" /> <br>
-                FCR: <input type="text" id="fcr" name="fcr" /> <br>
-                TR: <input type="text" id="tr" name="tr" /> <br>
-                DEMAND: <input type="text" id="demand" name="demand" /> <br>
-                COMPLIANCE: <input type="text" id="compliance" name="compliance" />
-            </p>
+            <form action="session.html" method="get" target="blank">
+                <p>
+                    <label for="name">Video name:</label> 
+                    <input type="text" id="name" name="name" />
 
-            <button onclick=startSession()>Start Session</button>
+                    <label for="session">Session number:</label>
+                    <input type="text" id="session" name="session" />
+
+                    <label for="length">Session length:</label>
+                    <input type="text" id="length" name="length" />
+                </p>
+                <h3>Button Information</h3>
+                <p>
+                    Enter behaviors: <br>
+                    <label for="r1">R1:</label>
+                    <input type="text" id="r1" name="r1" /> <br>
+                    
+                    <label for="r2">R2:</label>
+                    <input type="text" id="r2" name="r2" /> <br>
+
+                    <label for="r3">R3:</label> 
+                    <input type="text" id="r3" name="r3" /> <br>
+
+                    <label for="fcr">FCR:</label>
+                    <input type="text" id="fcr" name="fcr" /> <br>
+                    
+                    <label for="tr">TR:</label>
+                    <input type="text" id="tr" name="tr" /> <br>
+                    
+                    <label for="demand">DEMAND:</label>
+                    <input type="text" id="demand" name="demand" /> <br>
+
+                    <label for="compliance">COMPLIANCE:</label>
+                    <input type="text" id="compliance" name="compliance" />
+                </p>
+
+                <button type="submit">Start Session</button>
+            </form>
 
             <script src="script.js"></script>
         </main>
