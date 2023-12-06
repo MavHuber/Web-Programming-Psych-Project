@@ -7,8 +7,9 @@
     </head>
     <body id="grid-container" class="grid-container" onload=setButtons()>
         <main>
-            <h1 id="sessionInfo"></h1>
-                <div
+            <h1 id="sessionInfo">Session Information</h1>
+                <div id="vidNameText"></div>
+                <div id="sessNumDisplay"></div>
             <h2>Timer:</h2>
 
             <div class="r1Btn">
@@ -27,7 +28,17 @@
                 <button type="button" id="fcrBtn" onclick=fcrBtnAction()></button>
             </div>
 
-            <div class="trBtn"></div>
+            <div class="trBtn">
+                <button type="button" id="trBtn" onclick=trBtnAction()></button>
+            </div>
+
+            <div class="demandBtn">
+                <button type="button" id="demandBtn" onclick=demandBtnAction()></button>
+            </div>
+
+            <div class="compBtn">
+                <button type="button" id="compBtn" onclick=compBtnAction()></button>
+            </div>
 
             <p></p>
 

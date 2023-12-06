@@ -10,7 +10,7 @@ var compCount = 0;
 var timer = 0;
 
 function saveVar() {
-    var vidName = document.getElementById('vidName').value;
+    var vidName = document.getElementById('name').value;
     sessionStorage.setItem('vidName', vidName);
 
     var sessNum = document.getElementById('session').value;
@@ -42,30 +42,30 @@ function saveVar() {
 }
 
 function setButtons() {
-    var r1Text = sessionStorage.getItem('r1Text');
-    document.getElementById('r1Btn').innerHTML = r1Text;
+    var vidNameText = sessionStorage.getItem('vidName');
+    document.getElementById('vidNameText').innerHTML = "Video name: " + vidNameText;
+
+    var sessNumText = sessionStorage.getItem('sessNum');
+    document.getElementById('sessNumDisplay').innerHTML = "Session number: " + sessNumText;
 
     var r1Text = sessionStorage.getItem('r1Text');
     document.getElementById('r1Btn').innerHTML = r1Text;
 
-    var r1Text = sessionStorage.getItem('r1Text');
-    document.getElementById('r1Btn').innerHTML = r1Text;
+    var r2Text = sessionStorage.getItem('r2Text');
+    document.getElementById('r2Btn').innerHTML = r2Text;
 
-    var r1Text = sessionStorage.getItem('r1Text');
-    document.getElementById('r1Btn').innerHTML = r1Text;
+    var r3Text = sessionStorage.getItem('r3Text');
+    document.getElementById('r3Btn').innerHTML = r3Text;
 
-    var r1Text = sessionStorage.getItem('r1Text');
-    document.getElementById('r1Btn').innerHTML = r1Text;
+    var fcrText = sessionStorage.getItem('fcrText');
+    document.getElementById('fcrBtn').innerHTML = fcrText;
 
-    var r1Text = sessionStorage.getItem('r1Text');
-    document.getElementById('r1Btn').innerHTML = r1Text;
+    var trText = sessionStorage.getItem('trText');
+    document.getElementById('trBtn').innerHTML = trText;
 
-    var r1Text = sessionStorage.getItem('r1Text');
-    document.getElementById('r1Btn').innerHTML = r1Text;
+    var demandText = sessionStorage.getItem('demandText');
+    document.getElementById('demandBtn').innerHTML = demandText;
 
-    var r1Text = sessionStorage.getItem('r1Text');
-    document.getElementById('r1Btn').innerHTML = r1Text;
-
-    var r1Text = sessionStorage.getItem('r1Text');
-    document.getElementById('r1Btn').innerHTML = r1Text;
+    var compText = sessionStorage.getItem('compText');
+    document.getElementById('compBtn').innerHTML = compText;
 }
