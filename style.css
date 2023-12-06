@@ -7,4 +7,66 @@ body {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: 10% 40% 40% 10%;
+    grid-template-areas:
+        "header header header"
+        "r1Btn r2Btn r3Btn"
+        "fcrBtn trBtn demandBtn"
+        "compBtn";
+}
+
+.behaveBtn {
+    display: inline;
+    height: 150px;
+    width: 200px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px black;
+}
+
+#r1Btn {
+    background-color: red;
+    grid-area: "r1Btn";
+    place-self: center;
+}
+
+#r2Btn {
+    background-color: orange;
+    grid-area: "r2Btn";
+    place-self: center;
+}
+
+#r3Btn {
+    background-color: yellow;
+    grid-area: "r3Btn";
+    place-self: center;
+}
+
+#fcrBtn {
+    background-color: green;
+    grid-area: "fcrBtn";
+    place-self: center;
+}
+
+#trBtn {
+    background-color: lightblue;
+    grid-area: "trBtn";
+    place-self: center;
+}
+
+#demandBtn {
+    background-color: blue;
+    grid-area: "demandBtn";
+    place-self: center;
+}
+
+#compBtn {
+    background-color: purple;
+    grid-area: "compBtn";
+    place-self: center;
 }
