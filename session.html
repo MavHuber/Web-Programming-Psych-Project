@@ -5,13 +5,32 @@
         <title>ABA Behavior Tracker</title>
         <link href="style.css" rel="stylesheet" type="text/css" />
     </head>
-    <body>
+    <body id="grid-container" class="grid-container" onload=setButtons()>
         <main>
-            <h1>Session</h1>
-
+            <h1 id="sessionInfo"></h1>
+                <div
             <h2>Timer:</h2>
+
+            <div class="r1Btn">
+                <button type="button" id="r1Btn" onclick=r1BtnAction()></button> 
+            </div>
+
+            <div class="r2Btn">
+                <button type="button" id="r2Btn" onclick=r2BtnAction()></button>
+            </div>
+
+            <div class="r3Btn">
+                <button type="button" id="r3Btn" onclick=r3BtnAction()></button>
+            </div>
+
+            <div class="fcrBtn">
+                <button type="button" id="fcrBtn" onclick=fcrBtnAction()></button>
+            </div>
+
+            <div class="trBtn"></div>
 
             <p></p>
 
+            <script src="script.js"></script>
         </main>
     </body>
