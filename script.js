@@ -9,6 +9,7 @@ var compCount = 0;
 
 var timer = 0;
 
+//..........SAVE INPUTS TO SESSION STORAGE...........//
 function saveVar() {
     var vidName = document.getElementById('name').value;
     sessionStorage.setItem('vidName', vidName);
@@ -41,7 +42,9 @@ function saveVar() {
     sessionStorage.setItem('compText', compText);
 }
 
-function setButtons() {
+//.........START SESSION.........//
+function startSession() {
+    //........LABEL BUTTONS WITH INPUTS..........//
     var vidNameText = sessionStorage.getItem('vidName');
     document.getElementById('vidNameText').innerHTML = "Video name: " + vidNameText;
 
@@ -68,4 +71,35 @@ function setButtons() {
 
     var compText = sessionStorage.getItem('compText');
     document.getElementById('compBtn').innerHTML = compText;
+
+    
+}
+
+//............BUTTON COUNTS...............//
+function r1BtnAction() {
+    r1Count++;
+}
+
+function r2BtnAction() {
+    r2Count++;
+}
+
+function r3BtnAction() {
+    r3Count++;
+}
+
+function fcrBtnAction() {
+    fcrCount++;
+}
+
+function trBtnAction() {
+    trCount++;
+}
+
+function demandBtnAction() {
+    demandCount++;
+}
+
+function compBtnAction() {
+    compCount++;
 }
