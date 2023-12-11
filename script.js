@@ -1,14 +1,3 @@
-//Initialize variables
-var r1Count = 0;
-var r2Count = 0;
-var r3Count = 0;
-var fcrCount = 0;
-var trCount = 0;
-var demandCount = 0;
-var compCount = 0;
-
-var timer = 0;
-
 //..........SAVE INPUTS TO SESSION STORAGE...........//
 function saveVar() {
     var vidName = document.getElementById('name').value;
@@ -71,35 +60,61 @@ function startSession() {
 
     var compText = sessionStorage.getItem('compText');
     document.getElementById('compBtn').innerHTML = compText;
-
     
-}
+    //.............TOTAL DURATION................//
+    var totalMin = sessionStorage.getItem('vidLen');
+    const totalMilliseconds = totalMin * 60000;
 
-//............BUTTON COUNTS...............//
-function r1BtnAction() {
-    r1Count++;
-}
+    //...........SETUP INTERVAL............//
+    function setupBtnInterval(btnId, totalDuration) {
+        let clickCount = 0;
+        let totalCount = 0;
+        let didClickHappen = 0;
+        let intervalCount = 0;
+        const intervalDuration = 10000; // 10 seconds in milliseconds
+        const intervals = totalDuration / intervalDuration;
+        const button = document.getElementById(btnId);
 
-function r2BtnAction() {
-    r2Count++;
-}
+        function handleBtnClick() {
+            clickCount++;
+            totalCount++;
+        }
 
-function r3BtnAction() {
-    r3Count++;
-}
+        function checkBtnClicks() {
+            console.log(`Interval ${intervalCount + 1}: Clicks for  ${btnId} - ${clickCount}`);
+            intervalCount++;
+        
+            // if the clickCount stays at 0 that means the button had been pressed at least once
+            if (clickCount != 0) {
+                didClickHappen++;
+            }
+        
+            clickCount = 0; // Reset click count for the next interval
 
-function fcrBtnAction() {
-    fcrCount++;
-}
+            // check if all intervals are completed
+            if (intervalCount == intervals) {
+                clearInterval(intervalId);
+                console.log(`Total Clicks for ${btnId}: ${totalCount}`);
+                const percentage = (didClickHappen / intervals) * 100;
+                console.log(`Button ${btnId} pressed in ${percentage}% of intervals.`);
 
-function trBtnAction() {
-    trCount++;
-}
+                // Store the results in variables for later use
+                sessionStorage.setItem(`${btnId}_TotalClicks`, totalClicks);
+                sessionStorage.setItem(`${btnId}_Percentage`, percentage);
+            }
+        }
 
-function demandBtnAction() {
-    demandCount++;
-}
+        button.addEventListener('click', handleBtnClick);
 
-function compBtnAction() {
-    compCount++;
+        const intervalId = setInterval(checkBtnClicks, intervalDuration);
+    }
+
+    //.........SETUP BUTTONS..........//
+    setupBtnInterval('r1Btn', );
+    setupBtnInterval('r2Btn', );
+    setupBtnInterval('r3Btn', );
+    setupBtnInterval('fcrBtn', );
+    setupBtnInterval('trBtn', );
+    setupBtnInterval('demandBtn', );
+    setupBtnInterval('compBtn', );
 }
