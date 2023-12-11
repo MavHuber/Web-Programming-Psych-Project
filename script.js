@@ -99,7 +99,7 @@ function startSession() {
                 console.log(`Button ${btnId} pressed in ${percentage}% of intervals.`);
 
                 // Store the results in variables for later use
-                sessionStorage.setItem(`${btnId}_TotalClicks`, totalClicks);
+                sessionStorage.setItem(`${btnId}_TotalClicks`, totalCount);
                 sessionStorage.setItem(`${btnId}_Percentage`, percentage);
             }
         }
