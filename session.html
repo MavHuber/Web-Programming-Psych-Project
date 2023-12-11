@@ -5,7 +5,7 @@
         <title>ABA Behavior Tracker</title>
         <link href="style.css" rel="stylesheet" type="text/css" />
     </head>
-    <body id="grid-container" class="grid-container" onload=setButtons()>
+    <body id="grid-container" class="grid-container" onload=startSession()>
         <main>
             <h1 id="sessionInfo">Session Information</h1>
                 <div id="vidNameText"></div>
@@ -13,34 +13,34 @@
             <h2>Timer:</h2>
 
             <div class="r1Btn">
-                <button type="button" id="r1Btn" class="behaveBtn" onclick=r1BtnAction()></button> 
+                <button id="r1Btn" class="behaveBtn"></button> 
             </div>
 
             <div class="r2Btn">
-                <button type="button" id="r2Btn" class="behaveBtn" onclick=r2BtnAction()></button>
+                <button id="r2Btn" class="behaveBtn"></button>
             </div>
 
             <div class="r3Btn">
-                <button type="button" id="r3Btn" class="behaveBtn" onclick=r3BtnAction()></button>
+                <button id="r3Btn" class="behaveBtn"></button>
             </div>
 
             <div class="fcrBtn">
-                <button type="button" id="fcrBtn" class="behaveBtn" onclick=fcrBtnAction()></button>
+                <button id="fcrBtn" class="behaveBtn"></button>
             </div>
 
             <div class="trBtn">
-                <button type="button" id="trBtn" class="behaveBtn" onclick=trBtnAction()></button>
+                <button id="trBtn" class="behaveBtn"></button>
             </div>
 
             <div class="demandBtn">
-                <button type="button" id="demandBtn" class="behaveBtn" onclick=demandBtnAction()></button>
+                <button id="demandBtn" class="behaveBtn"></button>
             </div>
 
             <div class="compBtn">
-                <button type="button" id="compBtn" class="behaveBtn" onclick=compBtnAction()></button>
+                <button id="compBtn" class="behaveBtn"></button>
             </div>
 
-            <p></p>
+            <p>R1 count: </p>
 
             <script src="script.js"></script>
         </main>
