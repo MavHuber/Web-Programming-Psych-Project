@@ -110,11 +110,11 @@ function startSession() {
     }
 
     //.........SETUP BUTTONS..........//
-    setupBtnInterval('r1Btn', );
-    setupBtnInterval('r2Btn', );
-    setupBtnInterval('r3Btn', );
-    setupBtnInterval('fcrBtn', );
-    setupBtnInterval('trBtn', );
-    setupBtnInterval('demandBtn', );
-    setupBtnInterval('compBtn', );
+    setupBtnInterval('r1Btn', totalMilliseconds);
+    setupBtnInterval('r2Btn', totalMilliseconds);
+    setupBtnInterval('r3Btn', totalMilliseconds);
+    setupBtnInterval('fcrBtn', totalMilliseconds);
+    setupBtnInterval('trBtn', totalMilliseconds);
+    setupBtnInterval('demandBtn', totalMilliseconds);
+    setupBtnInterval('compBtn', totalMilliseconds);
 }
