@@ -3,15 +3,10 @@ body {
     margin:5%;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 10% 40% 40% 10%;
-    grid-template-areas:
-        "header header header"
-        "r1Btn r2Btn r3Btn"
-        "fcrBtn trBtn demandBtn"
-        "compBtn";
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 .behaveBtn {
@@ -31,42 +26,35 @@ body {
 
 #r1Btn {
     background-color: red;
-    grid-area: "r1Btn";
     place-self: center;
 }
 
 #r2Btn {
     background-color: orange;
-    grid-area: "r2Btn";
     place-self: center;
 }
 
 #r3Btn {
     background-color: yellow;
-    grid-area: "r3Btn";
     place-self: center;
 }
 
 #fcrBtn {
     background-color: green;
-    grid-area: "fcrBtn";
     place-self: center;
 }
 
 #trBtn {
     background-color: lightblue;
-    grid-area: "trBtn";
     place-self: center;
 }
 
 #demandBtn {
     background-color: blue;
-    grid-area: "demandBtn";
     place-self: center;
 }
 
 #compBtn {
     background-color: purple;
-    grid-area: "compBtn";
     place-self: center;
 }
