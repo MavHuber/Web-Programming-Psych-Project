@@ -41,25 +41,60 @@ function startSession() {
     document.getElementById('sessNumDisplay').innerHTML = "Session number: " + sessNumText;
 
     var r1Text = sessionStorage.getItem('r1Text');
-    document.getElementById('r1Btn').innerHTML = r1Text;
+    if (r1Text == "") {
+        document.getElementById('r1Btn').style.display = "none";
+    }
+    else {
+        document.getElementById('r1Btn').innerHTML = r1Text;
+    }
 
     var r2Text = sessionStorage.getItem('r2Text');
-    document.getElementById('r2Btn').innerHTML = r2Text;
+    if (r2Text == "") {
+        document.getElementById('r2Btn').style.display = "none";
+    }
+    else {
+        document.getElementById('r2Btn').innerHTML = r2Text;
+    }
 
     var r3Text = sessionStorage.getItem('r3Text');
-    document.getElementById('r3Btn').innerHTML = r3Text;
+    if (r3Text == "") {
+        document.getElementById('r3Btn').style.display = "none";
+    }
+    else {
+        document.getElementById('r3Btn').innerHTML = r3Text;
+    }
 
     var fcrText = sessionStorage.getItem('fcrText');
-    document.getElementById('fcrBtn').innerHTML = fcrText;
+    if (fcrText == "") {
+        document.getElementById('fcrBtn').style.display = "none";
+    }
+    else {
+        document.getElementById('fcrBtn').innerHTML = fcrText;
+    }
 
     var trText = sessionStorage.getItem('trText');
-    document.getElementById('trBtn').innerHTML = trText;
+    if (trText == "") {
+        document.getElementById('trBtn').style.display = "none";
+    }
+    else {
+        document.getElementById('trBtn').innerHTML = trText;
+    }
 
     var demandText = sessionStorage.getItem('demandText');
-    document.getElementById('demandBtn').innerHTML = demandText;
+    if (demandText == "") {
+        document.getElementById('demandBtn').style.display = "none";
+    }
+    else {
+        document.getElementById('demandBtn').innerHTML = demandText;
+    }
 
     var compText = sessionStorage.getItem('compText');
-    document.getElementById('compBtn').innerHTML = compText;
+    if (compText == "") {
+        document.getElementById('compBtn').style.display = "none";
+    }
+    else {
+        document.getElementById('compBtn').innerHTML = compText;
+    }
     
     //.............TOTAL DURATION................//
     var totalMin = sessionStorage.getItem('vidLen');
@@ -103,7 +138,16 @@ function startSession() {
                 sessionStorage.setItem(`${btnId}_Percentage`, percentage);
 
                 //FinalPrint function to display results
-                finalPrint()
+                //finalPrint()
+
+                const resultContainer = document.getElementById('resultContainer');
+                const resultDiv = document.createElement('div')
+                resultDiv.innerHTML = `<p><b>Button ${btnId}:</b></p>
+                                       <p>Total Clicks: ${totalCount}</p>
+                                       <p>Percentage: ${percentage}%</p>
+                                      `;
+                resultContainer.appendChild(resultDiv);
+                
             }
         }
 
@@ -113,7 +157,7 @@ function startSession() {
     }
 
     function finalPrint() {
-        const resultContainer = document.getElementById('resultsContainer');
+        const resultContainer = document.getElementById('resultContainer');
         const btnIds = ['r1Btn', 'r2Btn', 'r3Btn', 'fcrBtn', 'trBtn', 'demandBtn', 'compBtn'];
 
         //go through each btn to print results
@@ -134,7 +178,7 @@ function startSession() {
             resultContainer.appendChild(resultDiv);
 
             //increment loop
-            i++
+            i++;
         }
     }
 

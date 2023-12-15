@@ -10,7 +10,6 @@ body {
 }
 
 .behaveBtn {
-    display: inline;
     height: 100px;
     width: 150px;
     font-size: 24px;
@@ -23,39 +22,40 @@ body {
     border-radius: 15px;
     box-shadow: 0 5px black;
     padding: 5px;
+    margin-top: 10px;
 }
 
 #r1Btn {
-    background-color: red;
+    background-color: rgb(194, 22, 57);
     place-self: center;
 }
 
 #r2Btn {
-    background-color: orange;
+    background-color: rgb(255, 166, 0);
     place-self: center;
 }
 
 #r3Btn {
-    background-color: yellow;
+    background-color: rgb(222, 222, 0);
     place-self: center;
 }
 
 #fcrBtn {
-    background-color: green;
+    background-color: rgb(14, 135, 14);
     place-self: center;
 }
 
 #trBtn {
-    background-color: lightblue;
+    background-color: rgb(139, 197, 216);
     place-self: center;
 }
 
 #demandBtn {
-    background-color: blue;
+    background-color: rgb(37, 37, 212);
     place-self: center;
 }
 
 #compBtn {
-    background-color: purple;
+    background-color: rgb(199, 16, 199);
     place-self: center;
 }
