@@ -5,7 +5,7 @@
         <title>ABA Behavior Tracker</title>
         <link href="style.css" rel="stylesheet" type="text/css" />
     </head>
-    <body id="grid-container" class="grid-container" onload=startSession()>
+    <body id="flex-container" class="flex-container" onload=startSession()>
         <main>
             <h1 id="sessionInfo">Session Information</h1>
                 <div id="vidNameText"></div>
@@ -40,7 +40,10 @@
                 <button id="compBtn" class="behaveBtn"></button>
             </div>
 
-            <p>R1 count: </p>
+            <!--FUTURE: end session button to save to php database-->
+
+            <div class="resultsContainer"></div>
+
 
             <script src="script.js"></script>
         </main>

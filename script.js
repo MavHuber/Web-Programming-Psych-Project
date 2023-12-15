@@ -101,12 +101,41 @@ function startSession() {
                 // Store the results in variables for later use
                 sessionStorage.setItem(`${btnId}_TotalClicks`, totalCount);
                 sessionStorage.setItem(`${btnId}_Percentage`, percentage);
+
+                //FinalPrint function to display results
+                finalPrint()
             }
         }
 
         button.addEventListener('click', handleBtnClick);
 
         const intervalId = setInterval(checkBtnClicks, intervalDuration);
+    }
+
+    function finalPrint() {
+        const resultContainer = document.getElementById('resultsContainer');
+        const btnIds = ['r1Btn', 'r2Btn', 'r3Btn', 'fcrBtn', 'trBtn', 'demandBtn', 'compBtn'];
+
+        //go through each btn to print results
+        let i = 0;
+        while (i < btnIds.length) {
+            const btnId = btnIds[i];
+            const totalClicks = sessionStorage.getItem(`${btnId}_TotalClicks`);
+            const percentage = sessionStorage.getItem(`${btnId}_Percentage`);
+
+            // div element for each btn results
+            const resultDiv = document.createElement('div');
+            resultDiv.innerHTML = `<p>Button ${btnId}:</p>
+                                   <p>Total Clicks: ${totalClicks}</p>
+                                   <p>Percentage: ${percentage}%</p>
+                                   `;
+            
+            //append results to resultContainer
+            resultContainer.appendChild(resultDiv);
+
+            //increment loop
+            i++
+        }
     }
 
     //.........SETUP BUTTONS..........//
